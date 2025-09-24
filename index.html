@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疏影录 - 无锡市梅里中学教职工电话号码查询</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "STKaiti", serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f9f3f3 0%, #f0e6f6 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+        
+        /* 梅花背景装饰 */
+        .plum-blossom {
+            position: absolute;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .plum-blossom:nth-child(1) {
+            top: 5%;
+            left: 5%;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, #e8c4c4 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .plum-blossom:nth-child(2) {
+            top: 15%;
+            right: 10%;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, #d4b5e6 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .plum-blossom:nth-child(3) {
+            bottom: 10%;
+            left: 10%;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #c4d4e8 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .plum-blossom:nth-child(4) {
+            bottom: 20%;
+            right: 5%;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, #e8d4c4 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* 登录界面样式 */
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        
+        .login-title {
+            font-size: 2rem;
+            color: #8b5a7c;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .login-input {
+            padding: 12px 15px;
+            border: 2px solid #d9c6d9;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+            margin-bottom: 20px;
+        }
+        
+        .login-input:focus {
+            border-color: #8b5a7c;
+        }
+        
+        .login-btn {
+            padding: 12px;
+            background-color: #8b5a7c;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .login-btn:hover {
+            background-color: #7a4a6b;
+        }
+        
+        .login-error {
+            color: #e74c3c;
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0d0e0;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            color: #8b5a7c;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 5px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #a68a9e;
+            font-style: italic;
+        }
+        
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0d0e0;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #8b5a7c;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            border-bottom: 3px solid #8b5a7c;
+            font-weight: bold;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .search-section {
+            margin-bottom: 30px;
+        }
+        
+        .search-box {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .search-input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 2px solid #d9c6d9;
+            border-radius: 8px 0 0 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        
+        .search-input:focus {
+            border-color: #8b5a7c;
+        }
+        
+        .search-btn {
+            padding: 12px 25px;
+            background-color: #8b5a7c;
+            color: white;
+            border: none;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .search-btn:hover {
+            background-color: #7a4a6b;
+        }
+        
+        .result-section {
+            display: none;
+            background-color: #f9f5fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid #8b5a7c;
+        }
+        
+        .result-title {
+            font-size: 1.2rem;
+            color: #8b5a7c;
+            margin-bottom: 10px;
+        }
+        
+        .phone-number {
+            font-size: 1.5rem;
+            color: #333;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .class-info {
+            font-size: 1.2rem;
+            color: #333;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .copy-btn {
+            background-color: #8b5a7c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            margin-left: 5px;
+        }
+        
+        .copy-btn:hover {
+            background-color: #7a4a6b;
+        }
+        
+        .call-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+            margin-left: 5px;
+        }
+        
+        .call-btn:hover {
+            background-color: #45a049;
+        }
+        
+        .no-result {
+            text-align: center;
+            color: #a68a9e;
+            font-style: italic;
+            padding: 20px;
+        }
+        
+        .instructions {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #f5f0f7;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .instructions h3 {
+            color: #8b5a7c;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #a68a9e;
+            font-size: 14px;
+        }
+        
+        .logout-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .search-box {
+                flex-direction: column;
+            }
+            
+            .search-input {
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            
+            .search-btn {
+                border-radius: 8px;
+                width: 100%;
+            }
+            
+            .tabs {
+                flex-wrap: wrap;
+            }
+            
+            .tab {
+                flex: 1;
+                text-align: center;
+                min-width: 120px;
+            }
+            
+            .logout-btn {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .title {
+                font-size: 1.8rem;
+            }
+            
+            .phone-number {
+                font-size: 1.2rem;
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .copy-btn, .call-btn {
+                margin-top: 10px;
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            .login-container {
+                padding: 20px;
+                margin-top: 20px;
+            }
+            
+            .login-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* 隐藏主内容，登录后才显示 */
+        .main-content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 梅花背景装饰 -->
+    <div class="plum-blossom"></div>
+    <div class="plum-blossom"></div>
+    <div class="plum-blossom"></div>
+    <div class="plum-blossom"></div>
+    
+    <!-- 登录界面 -->
+    <div class="login-container" id="login-container">
+        <h1 class="login-title">疏影录</h1>
+        <p style="color: #a68a9e; margin-bottom: 30px;">无锡市梅里中学教职工电话号码查询系统</p>
+        <form class="login-form" id="login-form">
+            <input type="tel" class="login-input" id="login-phone" placeholder="请输入您的手机号码" required>
+            <button type="submit" class="login-btn">登录</button>
+            <div class="login-error" id="login-error">手机号码不在数据库中，无法登录</div>
+        </form>
+        <div style="margin-top: 20px; font-size: 14px; color: #666;">
+            <p>提示：只有本校教职工才能登录使用本系统</p>
+        </div>
+    </div>
+    
+    <!-- 主内容（登录后显示） -->
+    <div class="main-content" id="main-content">
+        <button class="logout-btn" id="logout-btn">退出登录</button>
+        
+        <div class="container">
+            <div class="header">
+                <h1 class="title">疏影录</h1>
+                <p class="subtitle">无锡市梅里中学教职工电话号码查询系统</p>
+            </div>
+            
+            <div class="tabs">
+                <div class="tab active" data-tab="teacher">电话号码查询</div>
+                <div class="tab" data-tab="class">班主任查询</div>
+            </div>
+            
+            <!-- 教职工查询 -->
+            <div class="tab-content active" id="teacher-tab">
+                <div class="search-section">
+                    <div class="search-box">
+                        <input type="text" id="teacher-search-input" class="search-input" placeholder="请输入教职工姓名...">
+                        <button id="teacher-search-btn" class="search-btn">查询</button>
+                    </div>
+                    <div id="teacher-result-section" class="result-section">
+                        <!-- 查询结果将在这里显示 -->
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <h3>使用说明 - 教职工电话号码查询</h3>
+                    <p>1. 在输入框中输入教职工姓名（支持模糊搜索）</p>
+                    <p>2. 点击"查询"按钮或按回车键进行搜索</p>
+                    <p>3. 查询结果将显示对应的电话号码</p>
+                    <p>4. 点击"复制"按钮可将电话号码复制到剪贴板</p>
+                    <p>5. 点击"拨打"按钮可直接拨打电话（仅限移动设备）</p>
+                </div>
+            </div>
+            
+            <!-- 班主任查询 -->
+            <div class="tab-content" id="class-tab">
+                <div class="search-section">
+                    <div class="search-box">
+                        <input type="text" id="class-search-input" class="search-input" placeholder="请输入班级号，例如：701">
+                        <button id="class-search-btn" class="search-btn">查询</button>
+                    </div>
+                    <div id="class-result-section" class="result-section">
+                        <!-- 查询结果将在这里显示 -->
+                    </div>
+                </div>
+                
+                <div class="instructions">
+                    <h3>使用说明 - 班主任查询</h3>
+                    <p>1. 在输入框中输入班级号（如701、802等）</p>
+                    <p>2. 点击"查询"按钮或按回车键进行搜索</p>
+                    <p>3. 查询结果将显示班主任、副班主任及其电话号码</p>
+                    <p>4. 点击"复制"按钮可将电话号码复制到剪贴板</p>
+                    <p>5. 点击"拨打"按钮可直接拨打电话（仅限移动设备）</p>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>© 2025 无锡市梅里中学 - 疏影录</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 电话号码数据（根据您提供的Excel内容整理）
+        const phoneData = [
+            { name: "章薇薇", phone: "13771462590" },
+            { name: "倪伟清", phone: "13961802009" },
+            { name: "吴慧", phone: "13921536512" },
+            { name: "李国坤", phone: "13812262209" },
+            { name: "陈冠群", phone: "13812294563" },
+            { name: "王峰君", phone: "18915332482" },
+            { name: "王秀兰", phone: "13812064369" },
+            { name: "华燕鸿", phone: "18351579182" },
+            { name: "华晓冬", phone: "13961802010" },
+            { name: "周梁琴", phone: "13665110260" },
+            { name: "李宏伟", phone: "13961898409" },
+            { name: "陆崇平", phone: "15961780332" },
+            { name: "吴燕(语)", phone: "13812511467" },
+            { name: "史忆生", phone: "18626315132" },
+            { name: "黄星裕", phone: "18912380851" },
+            { name: "张增光", phone: "13685136820" },
+            { name: "徐艳", phone: "18795869272" },
+            { name: "肖雪", phone: "15950566756" },
+            { name: "毕夏露", phone: "15651867071" },
+            { name: "陈燕君", phone: "18552081966" },
+            { name: "沈强", phone: "13961791667" },
+            { name: "蔡艺", phone: "13961778023" },
+            { name: "许坚", phone: "13921162647" },
+            { name: "沈卫东", phone: "13861695239" },
+            { name: "黄正伟", phone: "18951508806" },
+            { name: "王珍", phone: "15905720981" },
+            { name: "田佳佳", phone: "15861401010" },
+            { name: "王琦", phone: "13485040572" },
+            { name: "吴萍", phone: "13585015206" },
+            { name: "林胤志", phone: "15261513857" },
+            { name: "丁芸", phone: "15961895999" },
+            { name: "赵梦娜", phone: "15861673735" },
+            { name: "韦伟", phone: "13961824449" },
+            { name: "于淼", phone: "15734088268" },
+            { name: "纪萍", phone: "19850118595" },
+            { name: "周晨", phone: "15162263689" },
+            { name: "宿铭华", phone: "19814611025" },
+            { name: "严悦", phone: "18852980501" },
+            { name: "胡澜", phone: "13675603128" },
+            { name: "高雅婷", phone: "18314917271" },
+            { name: "蒯瑜", phone: "18151550250" },
+            { name: "刘涵", phone: "15862775638" },
+            { name: "杭冰", phone: "18452482308" },
+            { name: "何笑", phone: "13225268300" },
+            { name: "朱星宇", phone: "15895318028" },
+            { name: "赵伊雯", phone: "19850110830" },
+            { name: "刘引", phone: "13205250219" },
+            { name: "史明玮", phone: "15161215383" },
+            { name: "房英彤", phone: "18552000216" },
+            { name: "赵鑫", phone: "15951518320" },
+            { name: "蔡冬梅", phone: "19511320506" },
+            { name: "杭雨", phone: "18811930105" },
+            { name: "李慧玲", phone: "17853148675" },
+            { name: "刘思秦", phone: "18829061170" },
+            { name: "王佩宇", phone: "18297791767" },
+            { name: "杨敏", phone: "15234049763" },
+            { name: "张程祎", phone: "19519969767" },
+            { name: "顾雨凡", phone: "15505153055" },
+            { name: "苏妍予", phone: "18896958320" },
+            { name: "迟晓旭", phone: "15951861752" },
+            { name: "蒋烨玺", phone: "13771179618" },
+            { name: "尤丹", phone: "18761525170" },
+            { name: "吴逸玲", phone: "18205033903" },
+            { name: "华心昀", phone: "15961790822" },
+            { name: "张颖", phone: "18852891237" },
+            { name: "赵悦译", phone: "15251709775" },
+            { name: "沈国中", phone: "18816233973" },
+            { name: "朱雨婷", phone: "15251015745" },
+            { name: "浦舒玥", phone: "18262281630" },
+            { name: "顾嘉宁", phone: "19502203893" },
+            { name: "王嘉媛", phone: "18814507232" },
+            { name: "钱筱月", phone: "13092411341" },
+            { name: "蔡彦豪", phone: "15751779231" },
+            { name: "夏马成", phone: "17368037917" },
+            { name: "曹侠", phone: "17855950317" },
+            { name: "周晨晓", phone: "13861843680" },
+            { name: "袁仲苏", phone: "18014681596" },
+            { name: "张滕越", phone: "18512556068" },
+            { name: "赵星杰", phone: "18862071006" },
+            { name: "顾方", phone: "18800592760" },
+            { name: "张晶晶", phone: "15262772132" },
+            { name: "雷鸣", phone: "15861669792" },
+            { name: "丁桐", phone: "15189881050" },
+            { name: "顾晨柯", phone: "15161585869" },
+            { name: "姜玲玲", phone: "18661079368" },
+            { name: "李笑月", phone: "19551647746" },
+            { name: "李垚", phone: "18862397467" },
+            { name: "王恒澳", phone: "17852402897" },
+            { name: "余颖", phone: "18856271590" },
+            { name: "杨林健", phone: "13852700477" },
+            { name: "潘丽虹", phone: "15861322810" },
+            { name: "音雅楠", phone: "17882002394" },
+            { name: "徐晨", phone: "18112354557" },
+            { name: "顾艳", phone: "18913655598" },
+            { name: "凌梦娇", phone: "13771100496" },
+            { name: "郭荣", phone: "13771100024" },
+            { name: "钱鹏巍", phone: "18662821483" },
+            { name: "钱易林", phone: "13656188359" },
+            { name: "林琦", phone: "15590845583" },
+            { name: "吕钱陈", phone: "18861812800" },
+            { name: "卞依云", phone: "15651755528" },
+            { name: "周心越", phone: "18806201275" },
+            { name: "沈文君", phone: "18352518880" },
+            { name: "惠晨程", phone: "18961730182" },
+            { name: "黄玲", phone: "18921539402" },
+            { name: "刘君怡", phone: "13327909469" },
+            { name: "秦琦", phone: "18861501181" },
+            { name: "唐艺瑄", phone: "15261512989" },
+            { name: "马唯怡", phone: "13151029187" },
+            { name: "俞晴", phone: "15968837973" },
+            { name: "王馨", phone: "15919603891" },
+            { name: "王煜", phone: "15190215016" },
+            { name: "黄枢畅", phone: "13861620908" },
+            { name: "周晓雯", phone: "15851638755" },
+            { name: "夏盟", phone: "18036982396" },
+            { name: "陈春雨", phone: "13222923569" },
+            { name: "陆奕霖", phone: "18261573750" },
+            { name: "吴嘉文", phone: "19852891898" },
+            { name: "翁亦新", phone: "18036873440" },
+            { name: "侯贝妮", phone: "15295797700" },
+            { name: "王玥琪", phone: "15262009945" },
+            { name: "唐千词", phone: "17749520790" },
+            { name: "梁大鹏", phone: "19235026097" },
+            { name: "卞羽韩", phone: "13625211978" },
+            { name: "戴一凡", phone: "18015629927" },
+            { name: "纪世婧", phone: "19962646201" },
+            { name: "杨晓超", phone: "17606946460" },
+            { name: "赵寅生", phone: "15039301840" },
+            { name: "朱静燕", phone: "13771108263" },
+            { name: "徐芳", phone: "15190251829" },
+            { name: "陈冬芬", phone: "13961779087" },
+            { name: "李华", phone: "15370226385" },
+            { name: "汪婷", phone: "15062436857" },
+            { name: "许梦倩", phone: "18800589291" },
+            { name: "唐静红", phone: "17805050858" },
+            { name: "王书琴", phone: "15655660105" },
+            { name: "李兴宇", phone: "18205694008" },
+            { name: "王静静", phone: "17368787863" },
+            { name: "陈戴玮", phone: "17365312802" },
+            { name: "曾思迅", phone: "13771553225" },
+            { name: "钱忆杭", phone: "15895952050" },
+            { name: "张海鹏", phone: "18852126223" },
+            { name: "张瑜", phone: "18846056605" },
+            { name: "郭玉仙", phone: "18020315716" },
+            { name: "刘曼", phone: "13276280299" },
+            { name: "李花", phone: "18306180876" },
+            { name: "刘美叶", phone: "15152236764" },
+            { name: "姚瑾宁", phone: "15152200864" },
+            { name: "鲁丽", phone: "18627750518" },
+            { name: "张才馨", phone: "18751317001" },
+            { name: "胡紫薇", phone: "18845580927" },
+            { name: "曹文萱", phone: "13291357302" },
+            { name: "华骏绮", phone: "18118903227" },
+            { name: "李纯晓", phone: "18112373881" },
+            { name: "王珊", phone: "13585086590" },
+            { name: "高叶峰", phone: "15961800709" },
+            { name: "华燕", phone: "18921181102" },
+            { name: "唐明慧", phone: "15852573698" },
+            { name: "邬燕媛", phone: "13921508788" },
+            { name: "张雯", phone: "13776073257" },
+            { name: "赵雅文", phone: "15852475811" },
+            { name: "王泽仁", phone: "15961852885" },
+            { name: "王相如", phone: "19962560825" },
+            { name: "吴雨晴", phone: "18261761602" },
+            { name: "景一潇", phone: "17826629377" },
+            { name: "杨郁璇", phone: "19851635195" },
+            { name: "贾墨阳", phone: "18920736183" },
+            { name: "石秋霞", phone: "15751173018" },
+            { name: "陶欣怡", phone: "15505282160" },
+            { name: "张延波", phone: "13653902671" },
+            { name: "周萍", phone: "13812198098" },
+            { name: "储敏娟", phone: "13921115199" },
+            { name: "史媛媛", phone: "18994051901" },
+            { name: "刘洋", phone: "18762667487" },
+            { name: "王丽娟", phone: "15162233023" },
+            { name: "袁琳依", phone: "18961780160" },
+            { name: "王雪妍", phone: "19250911062" },
+            { name: "杨培", phone: "15261590029" },
+            { name: "毛玉扬", phone: "18502520266" },
+            { name: "陈一扬", phone: "13806191476" },
+            { name: "徐胜婕", phone: "19952506008" },
+            { name: "陆翔", phone: "18961592501" },
+            { name: "高志明", phone: "18206172016" },
+            { name: "朱向东", phone: "13961778103" },
+            { name: "陆志伟", phone: "13961778165" },
+            { name: "贺其林", phone: "15358057280" },
+            { name: "朱丽", phone: "15190201284" },
+            { name: "潘晓丽", phone: "13405753036" },
+            { name: "杜杨杨", phone: "15869457769" },
+            { name: "蔺玉龙", phone: "13382890166" },
+            { name: "朱弘铭", phone: "18068338087" },
+            { name: "李宜轩", phone: "15371010020" },
+            { name: "陈焱", phone: "18862930521" },
+            { name: "周承鑫", phone: "13915333921" },
+            { name: "纪卫瑶", phone: "13776717660" },
+            { name: "张璐璐", phone: "18752139795" },
+            { name: "程敏敏", phone: "17321319539" },
+            { name: "姜小涵", phone: "15827002394" },
+            { name: "陈悦玮", phone: "15298370574" },
+            { name: "徐隆", phone: "19851608738" },
+            { name: "石琰", phone: "13616168467" },
+            { name: "殷弘", phone: "18806200584" },
+            { name: "蔡可心", phone: "18061516335" },
+            { name: "俞琳", phone: "13914248412" },
+            { name: "朱继玲", phone: "13861776080" },
+            { name: "陈晓芳", phone: "13961778067" },
+            { name: "王冯懿", phone: "15052235900" },
+            { name: "王成成", phone: "19895621171" },
+            { name: "王乐", phone: "13153279833" },
+            { name: "徐元儒", phone: "18736088797" },
+            { name: "顾志秀", phone: "13151009503" },
+            { name: "黄芸", phone: "13921172171" },
+            { name: "杨玉玲", phone: "13685136920" },
+            { name: "张小霞", phone: "" },
+            { name: "柏洁", phone: "" },
+            { name: "王铃雯", phone: "15365258851" },
+            { name: "刘莉", phone: "13814202072" },
+            { name: "金茗", phone: "18115328862" },
+            { name: "徐楠", phone: "18255771268" },
+            { name: "张祺中", phone: "15251670255" },
+            { name: "毛佳伊", phone: "19310297049" },
+            { name: "郑雅俊", phone: "15579240128" },
+            { name: "陈岑", phone: "15852534510" },
+            { name: "李靓", phone: "18360897062" },
+            { name: "凌琳", phone: "19852292017" },
+            { name: "姚文生", phone: "18715129852" },
+            { name: "钱建国", phone: "13951511561" },
+            { name: "金雪峰", phone: "13812512934" },
+            { name: "蔡赟", phone: "15050685657" },
+            { name: "谢春英", phone: "13812059383" },
+            { name: "陈澜", phone: "18018308577" },
+            { name: "赵纯怡", phone: "13961803128" },
+            { name: "尤杨君", phone: "13584190980" },
+            { name: "朱美慧", phone: "13400026905" },
+            { name: "卢云", phone: "15852763577" },
+            { name: "尹春艳", phone: "18651571969" },
+            { name: "钱茗玥", phone: "17766239522" },
+            { name: "姚海侠", phone: "15251642382" },
+            { name: "吴丹敏", phone: "18151545663" },
+            { name: "许秋怡", phone: "15852833672" },
+            { name: "杨斯涵", phone: "13663818696" },
+            { name: "纪付超", phone: "18552098568" },
+            { name: "周春燕", phone: "18061909063" },
+            { name: "徐娟", phone: "15995257343" },
+            { name: "邵兴良", phone: "13812511562" },
+            { name: "韩宇", phone: "13921515669" },
+            { name: "韩智超", phone: "15751006721" },
+            { name: "张力", phone: "13585074322" },
+            { name: "黄雨欣", phone: "15922306135" },
+            { name: "吴忧", phone: "18851775899" },
+            { name: "金雯", phone: "18205118769" },
+            { name: "戴宏鑫", phone: "18351336923" },
+            { name: "任鑫雨", phone: "15735681558" },
+            { name: "郭悦", phone: "18220566438" },
+            { name: "黄以樱", phone: "19307417053" },
+            { name: "杨苗苗", phone: "15961807868" },
+            { name: "孙海琴", phone: "13921107636" },
+            { name: "高建春", phone: "18921254809" },
+            { name: "严钰红", phone: "13093005583" },
+            { name: "钱薇薇", phone: "15895321268" },
+            { name: "陈红芳", phone: "13606181939" },
+            { name: "杨晓东", phone: "13921176459" },
+            { name: "高华", phone: "13771480530" },
+            { name: "钱敏", phone: "17701511181" },
+            { name: "张文月", phone: "13812079661" },
+            { name: "吕群华", phone: "13621504010" },
+            { name: "吕婷婷", phone: "15365223268" },
+            { name: "邵志坚", phone: "13812290283" },
+            { name: "华旭东", phone: "13771037965" },
+            { name: "许燕明", phone: "13665113771" },
+            { name: "吕国栋", phone: "13915321317" },
+            { name: "毛宏敏", phone: "13912393625" },
+            { name: "马雄伟", phone: "13771401390" },
+            { name: "周小勇", phone: "13651534889" },
+            { name: "许浔", phone: "15961856125" },
+            { name: "李婷", phone: "13912518795" },
+            { name: "陆娟", phone: "13806191396" },
+            { name: "徐刚", phone: "15951580316" },
+            { name: "周瑶", phone: "15995287860" },
+            { name: "宋银玲", phone: "18961828581" },
+            { name: "俞晓兰", phone: "18861603383" },
+            { name: "程亚娟", phone: "15852744936" },
+            { name: "黄晓", phone: "13405757659" },
+            { name: "赵智侠", phone: "15190242209" },
+            { name: "薛向东", phone: "13961822299" },
+            { name: "陈田田", phone: "13921120095" },
+            { name: "谢宁夏", phone: "13951569319" },
+            { name: "过红娴", phone: "13961722578" },
+            { name: "齐军", phone: "18951563226" },
+            { name: "华芳", phone: "13861843898" },
+            { name: "华秋芳", phone: "13921392215" },
+            { name: "魏礼娟", phone: "13921519677" },
+            { name: "邓燕敏", phone: "13921166210" },
+            { name: "孙琪", phone: "13771185166" },
+            { name: "吴燕", phone: "13585025997" },
+            { name: "谢红霞", phone: "13861810788" },
+            { name: "宿倩", phone: "15861601533" },
+            { name: "沈远圆", phone: "15961805126" },
+            { name: "周洁", phone: "15052205268" },
+            { name: "余丽华", phone: "15206185216" },
+            { name: "顾阳阳", phone: "18262271497" },
+            { name: "陈梦婷", phone: "19952299520" },
+            { name: "李弘扬", phone: "15061838965" },
+            { name: "杨琳", phone: "15061434168" },
+            { name: "杨艳", phone: "13151005338" },
+            { name: "虞嘉", phone: "13812290110" },
+            { name: "苗亮", phone: "15861671981" },
+            { name: "张洁", phone: "13861878056" },
+            { name: "袁菲菲", phone: "15261586917" },
+            { name: "吴龙艳", phone: "18801513662" },
+            { name: "毛志远", phone: "15052127635" },
+            { name: "徐凡", phone: "18795876093" },
+            { name: "陈楠", phone: "18795864629" },
+            { name: "刘强", phone: "15698509290" },
+            { name: "苏孟雨", phone: "17826620352" },
+            { name: "王双凤", phone: "18846187910" },
+            { name: "邵慧敏", phone: "15188593711" },
+            { name: "朱婕", phone: "18961819349" },
+            { name: "施芮", phone: "15949254208" },
+            { name: "刘成", phone: "18020523807" },
+            { name: "赵沈娟", phone: "18248768677" },
+            { name: "谢晨慧", phone: "13083500979" },
+            { name: "邹果儿", phone: "15358050971" },
+            { name: "隋艳丽", phone: "15852819597" },
+            { name:"陈晓", phone: "18021565440"}
+            // ... 这里保留原有的所有数据，保持不变 ...
+        ];
+
+        // 班主任数据（根据您提供的Excel内容整理）
+        const classTeacherData = [
+            { class: "701", teacher: "张滕越", assistant: "苏妍予" },
+            { class: "702", teacher: "吴忧", assistant: "钱易林" },
+            { class: "703", teacher: "周晨晓", assistant: "顾艳" },
+            { class: "704", teacher: "迟晓旭", assistant: "胡紫薇" },
+            { class: "705", teacher: "郭玉仙", assistant: "钱薇薇" },
+            { class: "706", teacher: "陶欣怡", assistant: "姚文生" },
+            { class: "707", teacher: "俞晓兰", assistant: "李弘扬" },
+            { class: "708", teacher: "潘丽虹", assistant: "刘涵" },
+            { class: "709", teacher: "陈梦婷", assistant: "陈红芳" },
+            { class: "710", teacher: "王恒澳", assistant: "袁琳依" },
+            { class: "711", teacher: "周心越", assistant: "任鑫雨" },
+            { class: "712", teacher: "纪萍", assistant: "姚瑾宁" },
+            { class: "713", teacher: "吴逸玲", assistant: "陈一扬" },
+            { class: "714", teacher: "朱继玲", assistant: "李婷" },
+            { class: "715", teacher: "高雅婷", assistant: "唐千词" },
+            { class: "716", teacher: "王泽仁", assistant: "侯贝妮" },
+            { class: "717", teacher: "秦琦", assistant: "华燕" },
+            { class: "718", teacher: "朱雨婷", assistant: "李花" },
+            { class: "719", teacher: "刘思秦", assistant: "马雄伟" },
+            { class: "720", teacher: "王馨", assistant: "音雅楠" },
+            { class: "721", teacher: "黄雨欣", assistant: "吴燕(英)" },
+            { class: "722", teacher: "李垚", assistant: "张延波" },
+            { class: "723", teacher: "杨郁璇", assistant: "储敏娟" },
+            { class: "724", teacher: "王嘉媛", assistant: "石琰" },
+            { class: "725", teacher: "胡澜", assistant: "翁亦新" },
+            { class: "726", teacher: "王玥琪", assistant: "刘曼" },
+            { class: "727", teacher: "尤丹", assistant: "高华" },
+            { class: "728", teacher: "刘君怡", assistant: "邵兴良" },
+            { class: "729", teacher: "金雯", assistant: "张颖" },
+            { class: "801", teacher: "王丽娟", assistant: "于淼" },
+            { class: "802", teacher: "宿倩", assistant: "周小勇" },
+            { class: "803", teacher: "蔡彦豪", assistant: "房英彤" },
+            { class: "804", teacher: "梁大鹏", assistant: "黄以樱" },
+            { class: "805", teacher: "宿铭华", assistant: "袁菲菲" },
+            { class: "806", teacher: "沈文君", assistant: "余颖" },
+            { class: "807", teacher: "史媛媛", assistant: "陈楠" },
+            { class: "808", teacher: "蒋烨玺", assistant: "沈远圆" },
+            { class: "809", teacher: "景一潇", assistant: "张程祎" },
+            { class: "810", teacher: "李笑月", assistant: "杭雨" },
+            { class: "811", teacher: "赵雅文", assistant: "杨敏" },
+            { class: "812", teacher: "陆奕霖", assistant: "吴雨晴" },
+            { class: "813", teacher: "徐晨", assistant: "杨苗苗" },
+            { class: "814", teacher: "丁桐", assistant: "杨晓超" },
+            { class: "815", teacher: "张文月", assistant: "程亚娟" },
+            { class: "816", teacher: "杨琳", assistant: "赵悦译" },
+            { class: "817", teacher: "赵伊雯", assistant: "卞依云" },
+            { class: "818", teacher: "杨林健", assistant: "吴嘉文" },
+            { class: "819", teacher: "邬燕媛", assistant: "鲁丽" },
+            { class: "820", teacher: "赵星杰", assistant: "周晓雯" },
+            { class: "821", teacher: "陈春雨", assistant: "华骏绮" },
+            { class: "822", teacher: "钱鹏巍", assistant: "邵慧敏" },
+            { class: "823", teacher: "吕钱陈", assistant: "杭冰" },
+            { class: "824", teacher: "张才馨", assistant: "刘洋" },
+            { class: "825", teacher: "施芮", assistant: "吴萍" },
+            { class: "826", teacher: "王珮宇", assistant: "王双凤" },
+            { class: "901", teacher: "林琦", assistant: "纪世婧" },
+            { class: "902", teacher: "王静静", assistant: "张晶晶" },
+            { class: "903", teacher: "吕群华", assistant: "许梦倩" },
+            { class: "904", teacher: "浦舒玥", assistant: "吴龙艳" },
+            { class: "905", teacher: "顾嘉宁", assistant: "夏盟" },
+            { class: "906", teacher: "陈田田", assistant: "张雯" },
+            { class: "907", teacher: "陈戴玮", assistant: "卞羽韩" },
+            { class: "908", teacher: "张洁", assistant: "陈冬芬" },
+            { class: "909", teacher: "刘引", assistant: "唐明慧" },
+            { class: "910", teacher: "李兴宇", assistant: "王琦" },
+            { class: "911", teacher: "王煜", assistant: "苏孟雨" },
+            { class: "912", teacher: "赵鑫", assistant: "姜玲玲" },
+            { class: "913", teacher: "顾阳阳", assistant: "纪付超" },
+            { class: "914", teacher: "谢晨慧", assistant: "朱星宇" },
+            { class: "915", teacher: "顾方", assistant: "王书琴" },
+            { class: "916", teacher: "赵梦娜", assistant: "吕婷婷" },
+            { class: "917", teacher: "陈岑", assistant: "陆娟" },
+            { class: "918", teacher: "贾墨阳", assistant: "唐艺瑄" },
+            { class: "919", teacher: "谢红霞", assistant: "朱静燕" },
+            { class: "920", teacher: "许浔", assistant: "谢宁夏" },
+            { class: "921", teacher: "袁仲苏", assistant: "史明玮" },
+            { class: "922", teacher: "蔡冬梅", assistant: "郭荣" },
+            { class: "923", teacher: "雷鸣", assistant: "凌梦娇" },
+            { class: "924", teacher: "隋艳丽", assistant: "华芳" },
+            { class: "925", teacher: "何笑", assistant: "周瑶" },
+            { class: "926", teacher: "韩智超", assistant: "周晨" },
+            { class: "927", teacher: "惠晨程", assistant: "钱筱月" },
+            { class: "928", teacher: "戴一凡", assistant: "钱忆杭" },
+            { class: "929", teacher: "沈国中", assistant: "王相如" },
+            { class: "930", teacher: "刘强", assistant: "李慧玲" },
+            { class: "931", teacher: "严悦", assistant: "余丽华" },
+            { class: "932", teacher: "赵沈娟", assistant: "戴宏鑫" }
+            // ... 这里保留原有的所有数据，保持不变 ...
+        ];
+
+        // 获取DOM元素
+        const loginContainer = document.getElementById('login-container');
+        const loginForm = document.getElementById('login-form');
+        const loginPhoneInput = document.getElementById('login-phone');
+        const loginError = document.getElementById('login-error');
+        const mainContent = document.getElementById('main-content');
+        const logoutBtn = document.getElementById('logout-btn');
+        
+        const tabs = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        const teacherSearchInput = document.getElementById('teacher-search-input');
+        const teacherSearchBtn = document.getElementById('teacher-search-btn');
+        const teacherResultSection = document.getElementById('teacher-result-section');
+        
+        const classSearchInput = document.getElementById('class-search-input');
+        const classSearchBtn = document.getElementById('class-search-btn');
+        const classResultSection = document.getElementById('class-result-section');
+
+        // 检查是否已经登录
+        function checkLoginStatus() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const userPhone = localStorage.getItem('userPhone');
+            
+            if (isLoggedIn === 'true' && userPhone) {
+                // 验证用户手机号是否仍在数据库中
+                const userExists = phoneData.some(item => item.phone === userPhone);
+                if (userExists) {
+                    showMainContent();
+                    return true;
+                } else {
+                    // 用户不在数据库中，清除登录状态
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('userPhone');
+                }
+            }
+            return false;
+        }
+
+        // 显示主内容
+        function showMainContent() {
+            loginContainer.style.display = 'none';
+            mainContent.style.display = 'block';
+        }
+
+        // 显示登录界面
+        function showLogin() {
+            loginContainer.style.display = 'block';
+            mainContent.style.display = 'none';
+            loginPhoneInput.value = '';
+            loginError.style.display = 'none';
+        }
+
+        // 登录功能
+        function login(phone) {
+            // 验证手机号是否在数据库中
+            const userExists = phoneData.some(item => item.phone === phone);
+            
+            if (userExists) {
+                // 登录成功
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userPhone', phone);
+                showMainContent();
+                loginError.style.display = 'none';
+            } else {
+                // 登录失败
+                loginError.style.display = 'block';
+            }
+        }
+
+        // 退出登录
+        function logout() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userPhone');
+            showLogin();
+        }
+
+        // 登录表单提交事件
+        loginForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const phone = loginPhoneInput.value.trim();
+            
+            if (!phone) {
+                alert('请输入手机号码');
+                return;
+            }
+            
+            login(phone);
+        });
+
+        // 退出登录按钮事件
+        logoutBtn.addEventListener('click', logout);
+
+        // 页面加载时检查登录状态
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!checkLoginStatus()) {
+                showLogin();
+            }
+        });
+
+        // 标签切换功能
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const tabId = tab.getAttribute('data-tab');
+                
+                // 移除所有活动标签和内容
+                tabs.forEach(t => t.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // 激活当前标签和内容
+                tab.classList.add('active');
+                document.getElementById(`${tabId}-tab`).classList.add('active');
+            });
+        });
+
+        // 教职工搜索功能
+        function searchTeacher() {
+            const searchTerm = teacherSearchInput.value.trim();
+            
+            if (!searchTerm) {
+                alert('请输入姓名进行查询');
+                return;
+            }
+            
+            // 模糊搜索
+            const results = phoneData.filter(item => 
+                item.name.includes(searchTerm)
+            );
+            
+            // 显示结果
+            displayTeacherResults(results, searchTerm);
+        }
+
+        // 显示教职工搜索结果
+        function displayTeacherResults(results, searchTerm) {
+            teacherResultSection.innerHTML = '';
+            
+            if (results.length === 0) {
+                teacherResultSection.innerHTML = '<div class="no-result">未找到与 "' + searchTerm + '" 相关的电话号码</div>';
+            } else {
+                results.forEach(result => {
+                    const resultDiv = document.createElement('div');
+                    resultDiv.className = 'result-item';
+                    
+                    const title = document.createElement('div');
+                    title.className = 'result-title';
+                    title.textContent = result.name;
+                    
+                    const phoneDiv = document.createElement('div');
+                    phoneDiv.className = 'phone-number';
+                    
+                    const phoneSpan = document.createElement('span');
+                    phoneSpan.textContent = result.phone || '暂无号码';
+                    
+                    const buttonContainer = document.createElement('div');
+                    buttonContainer.className = 'button-container';
+                    
+                    const copyBtn = document.createElement('button');
+                    copyBtn.className = 'copy-btn';
+                    copyBtn.textContent = '复制';
+                    copyBtn.onclick = () => copyToClipboard(result.phone);
+                    
+                    const callBtn = document.createElement('button');
+                    callBtn.className = 'call-btn';
+                    callBtn.textContent = '拨打';
+                    callBtn.onclick = () => makePhoneCall(result.phone);
+                    
+                    phoneDiv.appendChild(phoneSpan);
+                    if (result.phone) {
+                        buttonContainer.appendChild(copyBtn);
+                        buttonContainer.appendChild(callBtn);
+                        phoneDiv.appendChild(buttonContainer);
+                    }
+                    
+                    resultDiv.appendChild(title);
+                    resultDiv.appendChild(phoneDiv);
+                    
+                    teacherResultSection.appendChild(resultDiv);
+                });
+            }
+            
+            teacherResultSection.style.display = 'block';
+        }
+
+        // 班级搜索功能
+        function searchClass() {
+            const searchTerm = classSearchInput.value.trim();
+            
+            if (!searchTerm) {
+                alert('请输入班级号进行查询');
+                return;
+            }
+            
+            // 精确搜索班级
+            const result = classTeacherData.find(item => 
+                item.class === searchTerm
+            );
+            
+            // 显示结果
+            displayClassResult(result, searchTerm);
+        }
+
+        // 显示班级搜索结果
+        function displayClassResult(result, searchTerm) {
+            classResultSection.innerHTML = '';
+            
+            if (!result) {
+                classResultSection.innerHTML = '<div class="no-result">未找到班级 "' + searchTerm + '" 的相关信息</div>';
+            } else {
+                // 查找班主任和副班主任的电话号码
+                const teacherPhone = phoneData.find(item => item.name === result.teacher)?.phone || '暂无号码';
+                const assistantPhone = phoneData.find(item => item.name === result.assistant)?.phone || '暂无号码';
+                
+                const classInfo = document.createElement('div');
+                classInfo.className = 'class-info';
+                classInfo.innerHTML = `<strong>班级：${result.class}</strong>`;
+                
+                const teacherDiv = document.createElement('div');
+                teacherDiv.className = 'result-item';
+                
+                const teacherTitle = document.createElement('div');
+                teacherTitle.className = 'result-title';
+                teacherTitle.textContent = '班主任：' + result.teacher;
+                
+                const teacherPhoneDiv = document.createElement('div');
+                teacherPhoneDiv.className = 'phone-number';
+                
+                const teacherPhoneSpan = document.createElement('span');
+                teacherPhoneSpan.textContent = teacherPhone;
+                
+                const teacherButtonContainer = document.createElement('div');
+                teacherButtonContainer.className = 'button-container';
+                
+                const teacherCopyBtn = document.createElement('button');
+                teacherCopyBtn.className = 'copy-btn';
+                teacherCopyBtn.textContent = '复制';
+                teacherCopyBtn.onclick = () => copyToClipboard(teacherPhone);
+                
+                const teacherCallBtn = document.createElement('button');
+                teacherCallBtn.className = 'call-btn';
+                teacherCallBtn.textContent = '拨打';
+                teacherCallBtn.onclick = () => makePhoneCall(teacherPhone);
+                
+                teacherPhoneDiv.appendChild(teacherPhoneSpan);
+                if (teacherPhone !== '暂无号码') {
+                    teacherButtonContainer.appendChild(teacherCopyBtn);
+                    teacherButtonContainer.appendChild(teacherCallBtn);
+                    teacherPhoneDiv.appendChild(teacherButtonContainer);
+                }
+                
+                teacherDiv.appendChild(teacherTitle);
+                teacherDiv.appendChild(teacherPhoneDiv);
+                
+                const assistantDiv = document.createElement('div');
+                assistantDiv.className = 'result-item';
+                
+                const assistantTitle = document.createElement('div');
+                assistantTitle.className = 'result-title';
+                assistantTitle.textContent = '副班主任：' + result.assistant;
+                
+                const assistantPhoneDiv = document.createElement('div');
+                assistantPhoneDiv.className = 'phone-number';
+                
+                const assistantPhoneSpan = document.createElement('span');
+                assistantPhoneSpan.textContent = assistantPhone;
+                
+                const assistantButtonContainer = document.createElement('div');
+                assistantButtonContainer.className = 'button-container';
+                
+                const assistantCopyBtn = document.createElement('button');
+                assistantCopyBtn.className = 'copy-btn';
+                assistantCopyBtn.textContent = '复制';
+                assistantCopyBtn.onclick = () => copyToClipboard(assistantPhone);
+                
+                const assistantCallBtn = document.createElement('button');
+                assistantCallBtn.className = 'call-btn';
+                assistantCallBtn.textContent = '拨打';
+                assistantCallBtn.onclick = () => makePhoneCall(assistantPhone);
+                
+                assistantPhoneDiv.appendChild(assistantPhoneSpan);
+                if (assistantPhone !== '暂无号码') {
+                    assistantButtonContainer.appendChild(assistantCopyBtn);
+                    assistantButtonContainer.appendChild(assistantCallBtn);
+                    assistantPhoneDiv.appendChild(assistantButtonContainer);
+                }
+                
+                assistantDiv.appendChild(assistantTitle);
+                assistantDiv.appendChild(assistantPhoneDiv);
+                
+                classResultSection.appendChild(classInfo);
+                classResultSection.appendChild(teacherDiv);
+                classResultSection.appendChild(assistantDiv);
+            }
+            
+            classResultSection.style.display = 'block';
+        }
+
+        // 复制到剪贴板功能
+        function copyToClipboard(text) {
+            if (!text || text === '暂无号码') return;
+            
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            
+            // 显示复制成功提示
+            alert('电话号码已复制到剪贴板: ' + text);
+        }
+
+        // 拨打电话功能
+        function makePhoneCall(phoneNumber) {
+            if (!phoneNumber || phoneNumber === '暂无号码') return;
+            
+            // 确认是否拨打电话
+            if (confirm('是否要拨打 ' + phoneNumber + '？')) {
+                // 使用tel:协议拨打电话（在移动设备上有效）
+                window.location.href = 'tel:' + phoneNumber;
+            }
+        }
+
+        // 事件监听
+        teacherSearchBtn.addEventListener('click', searchTeacher);
+        teacherSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchTeacher();
+            }
+        });
+        
+        classSearchBtn.addEventListener('click', searchClass);
+        classSearchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchClass();
+            }
+        });
+    </script>
+</body>
+</html>
